@@ -89,21 +89,21 @@ process_component() {
 log "${C}Starting script...${NC}\n"
 
 if [ ${#DISABLE_LIST[@]} -gt 0 ]; then
-    log "${C}Disabling ${#DISABLE_LIST[@]} packages...${NC}\n"
+    log "${C}Disabling ${#DISABLE_LIST[@]} packages...${NC}"
     for pkg in "${DISABLE_LIST[@]}"; do
         process_package "$pkg" "disable" "pm disable"
     done
 fi
 
 if [ ${#DISABLE_COMPONENTS[@]} -gt 0 ]; then
-    log "\n${C}Disabling ${#DISABLE_COMPONENTS[@]} components...${NC}\n"
+    log "\n${C}Disabling ${#DISABLE_COMPONENTS[@]} components...${NC}"
     for comp in "${DISABLE_COMPONENTS[@]}"; do
         process_component "$comp"
     done
 fi
 
 if [ ${#UNINSTALL_LIST[@]} -gt 0 ]; then
-    log "\n${C}Uninstalling ${#UNINSTALL_LIST[@]} packages...${NC}\n"
+    log "\n${C}Uninstalling ${#UNINSTALL_LIST[@]} packages...${NC}"
     for pkg in "${UNINSTALL_LIST[@]}"; do
         process_package "$pkg" "uninstall" "pm uninstall --user 0"
     done
