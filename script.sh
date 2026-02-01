@@ -1,7 +1,4 @@
-
-
-#!/data/data/com.termux/files/usr/bin/bash
-
+#!/usr/bin/env bash
 # Cores
 R='\033[0;31m'
 G='\033[0;32m'
