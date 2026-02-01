@@ -111,4 +111,9 @@ if [ ${#UNINSTALL_LIST[@]} -gt 0 ]; then
     done
 fi
 
+# FLAG DE USO PESSOAL 
+su -c appops set com.android.systemui TOAST_WINDOW deny
+
 log "\n${C}Completed! Log saved at: $LOGFILE${NC}\n"
+
+
