@@ -38,6 +38,7 @@ UNINSTALL_LIST=(
     "com.google.android.apps.turbo"
     "com.google.android.accessibility.switchaccess"
     "com.android.cellbroadcastreceiver.module"
+    "com.android.healthconnect.controller"
 )
 
 process_package() {
