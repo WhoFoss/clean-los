@@ -41,6 +41,7 @@ UNINSTALL_LIST=(
     "com.google.android.apps.nbu.files"
     "com.android.hotwordenrollment.okgoogle"
     "com.android.hotwordenrollment.xgoogle"
+    "com.google.android.apps.restore"
 )
 
 process_package() {
