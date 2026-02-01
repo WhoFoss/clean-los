@@ -112,7 +112,12 @@ if [ ${#UNINSTALL_LIST[@]} -gt 0 ]; then
 fi
 
 # FLAG DE USO PESSOAL 
-su -c appops set com.android.systemui TOAST_WINDOW deny
+output=$(su -c "appops set com.android.systemui TOAST_WINDOW deny" 2>&1)
+if [ $? -eq 0 ]; then
+    log "${G}System toast disabled${NC}"
+else
+    log "${R}Failed to disable system toast${NC}"
+fi
 
 log "\n${C}Completed! Log saved at: $LOGFILE${NC}\n"
 
