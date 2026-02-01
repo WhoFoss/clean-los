@@ -41,6 +41,11 @@ UNINSTALL_LIST=(
     "com.google.android.apps.restore"
 )
 
+# Tweaks do sistema (comando|descrição)
+SYSTEM_TWEAKS=(
+    "appops set com.android.systemui TOAST_WINDOW deny|System toasts"
+)
+
 process_package() {
     local pkg="$1"
     local action="$2"
@@ -111,8 +116,13 @@ if [ ${#UNINSTALL_LIST[@]} -gt 0 ]; then
     done
 fi
 
-# FLAG DE USO PESSOAL 
-su -c "appops set com.android.systemui TOAST_WINDOW deny"
+# Aplicar tweaks do sistema
+if [ ${#SYSTEM_TWEAKS[@]} -gt 0 ]; then
+    log "\n${C}Applying ${#SYSTEM_TWEAKS[@]} system tweaks...${NC}"
+    for tweak in "${SYSTEM_TWEAKS[@]}"; do
+        process_tweak "$tweak"
+    done
+fi
 
 log "\n${C}Completed! Log saved at: $LOGFILE${NC}\n"
 
