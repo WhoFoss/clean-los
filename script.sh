@@ -39,6 +39,8 @@ UNINSTALL_LIST=(
     "com.android.cellbroadcastreceiver.module"
     "com.android.healthconnect.controller"
     "com.google.android.apps.nbu.files"
+    "com.android.hotwordenrollment.okgoogle"
+    "com.android.hotwordenrollment.xgoogle"
 )
 
 process_package() {
