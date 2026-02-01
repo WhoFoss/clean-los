@@ -20,7 +20,6 @@ log() {
 
 DISABLE_LIST=(
     "com.google.android.apps.work.clouddpc"
-    "com.google.android.apps.nbu.files"
     "com.google.android.gm"
     "com.google.android.as"
     "com.google.android.apps.safetyhub"
@@ -39,6 +38,7 @@ UNINSTALL_LIST=(
     "com.google.android.accessibility.switchaccess"
     "com.android.cellbroadcastreceiver.module"
     "com.android.healthconnect.controller"
+    "com.google.android.apps.nbu.files"
 )
 
 process_package() {
