@@ -37,6 +37,7 @@ UNINSTALL_LIST=(
     "com.google.android.apps.wellbeing"
     "com.google.android.apps.turbo"
     "com.google.android.accessibility.switchaccess"
+    "com.android.cellbroadcastreceiver.module"
 )
 
 process_package() {
