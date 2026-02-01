@@ -25,6 +25,7 @@ DISABLE_LIST=(
     "com.google.android.as"
     "com.google.android.apps.safetyhub"
     "com.google.audio.hearing.visualization.accessibility.scribe"
+    "com.google.android.setupwizard"
 )
 
 DISABLE_COMPONENTS=(
