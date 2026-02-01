@@ -36,6 +36,7 @@ UNINSTALL_LIST=(
     "com.google.android.projection.gearhead"
     "com.google.android.apps.wellbeing"
     "com.google.android.apps.turbo"
+    "com.google.android.accessibility.switchaccess"
 )
 
 process_package() {
