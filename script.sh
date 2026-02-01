@@ -93,6 +93,19 @@ process_component() {
     fi
 }
 
+# Função para aplicar tweaks do sistema
+process_tweak() {
+    local tweak="$1"
+    local cmd="${tweak%|*}"
+    local desc="${tweak#*|}"
+    
+    if su -c "$cmd" >/dev/null 2>&1; then
+        log "${G}TWEAKED: $desc${NC}"
+    else
+        log "${R}FAILED: $desc${NC}"
+    fi
+}
+
 log "${C}Starting script...${NC}\n"
 
 if [ ${#DISABLE_LIST[@]} -gt 0 ]; then
